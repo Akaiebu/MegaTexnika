@@ -1,0 +1,90 @@
+.mega{
+    width: 500px;
+    margin: auto;
+}
+.mega h1{
+    color: #596C72;
+    font-size: 80px;
+    font-weight: 700;
+    line-height: 98px;
+    text-align: center;
+}
+#info{
+    color: #FFC01F;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 25px;
+    text-align: center;
+    margin: 10px 0;
+}
+.mega p{
+    color: #353535;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    text-align: center;
+}
+.bgimg{
+    width: 100%;
+    height: 425px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(../../../public/image.png);
+}
+.bgshadow{
+    width: 100%;
+    padding: 20px;
+    margin-top: 70px;
+    box-shadow: 0px 0px 10px 0px #95959540;
+}
+.hflex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 600px;
+}
+.atech h2,
+.habout h2{
+    color: #596C72;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 70px;
+}
+.atech p{
+    width: 480px
+}
+.habout p{
+    width: 620px;
+}
+.atech p,
+.habout p{
+    color: #353535;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    margin-top: 20px;
+}
+.imgborder{
+    padding: 20px;
+    box-shadow: 0 0 10px 0 #95959540;
+}
+.about{
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    margin-top: 100px;
+    margin-bottom: 40px;
+}
+.habout{
+    width: 741px;
+}
+.sinaq{
+    padding: 0 40px;
+}
+.jcb,
+.megatex{
+    padding: 15px;
+    box-shadow: 0px 0px 10px 0px #95959525;
+    border-radius: 5px;
+}

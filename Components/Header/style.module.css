@@ -1,0 +1,40 @@
+.flexing{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #353535;
+    font-size: 12px;
+    font-weight: 500;
+}
+.link a{
+    display: inline-block;
+    margin-left: 20px;
+}
+.link svg{
+    width: 15px;
+    height: 15px;
+    color: #353535;
+}
+.nav{
+    padding: 10px;
+    background-color: #FFC01F;
+}
+.navigation{
+    display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding:40px 0;
+}
+.navi a{
+    display: inline-block;
+    padding:0 10px;
+    font-weight: 400;
+    font-size: 14px;
+    color: #353535;
+    line-height: 17px;
+}
+.lang{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+}
