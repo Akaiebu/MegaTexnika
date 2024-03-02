@@ -1,13 +1,16 @@
 "use client"
+import axios from 'axios'
 import React from 'react'
-import styles from './style.module.css'
-import { descriptions, images } from '@/Components/data'
 import Link from 'next/link'
 import Image from 'next/image'
+import styles from './style.module.css'
 import Carousel from 'react-multi-carousel'
 import "react-multi-carousel/lib/styles.css";
+import { Idescriptions, Iimages } from '@/Interface'
 
-const page = () => {
+const page = async () => {
+  const data = await axios.get('http://localhost:8000/images/')
+  const datas = await axios.get('http://localhost:8000/descriptions/')
   const responsive = {
     desktop: {
       breakpoint: { max: 3000, min: 1200 },
@@ -31,20 +34,6 @@ const page = () => {
       slidesToSlide: 1 
     }
   };
-  const rows = [
-    {id: 1 , descriptions },
-    {id: 2 , descriptions },
-    {id: 3 , descriptions },
-    {id: 4 , descriptions },
-    {id: 5 , descriptions },
-    {id: 6 , descriptions },
-    {id: 7 , descriptions },
-    {id: 8 , descriptions },
-    {id: 9 , descriptions },
-    {id: 10 , descriptions },
-    {id: 11 , descriptions },
-    {id: 12, descriptions },
-  ]
   return (
     <div>
       <div className="container">
@@ -52,14 +41,13 @@ const page = () => {
         <h4 className={styles.center}>Texnikalar</h4>
         <div className={styles.disflex}>
           <Link href='/'><p>Hamısı</p></Link>
-        {images.map(({id,to,title}) => {
+        {data.data.map(({id,to,title}: Iimages) => {
           return (
             <Link href={to} key={id}>
               <div className={styles.tech}>
                 <p>{title}</p>
               </div>
-            </Link>
-            )
+            </Link>)
           })}
         </div>
         </div>
@@ -75,10 +63,7 @@ const page = () => {
         customTransition="all .5"
         transitionDuration={500}
         >
-            {rows.map(({id,descriptions}) => {
-              return (
-                <div className={styles.rowsmap} key={id}>
-                  {descriptions.map(({id,title,il,qiymet_ay,qiymet_gun,mezenne,source}) => {
+              {datas.data.map(({id,title,il,qiymet_ay,qiymet_gun,mezenne,source}: Idescriptions) => {
               return (
               <div className={styles.icare} key={id}>
                 <Image src={source} alt='texnika' width={290} height={264} />
@@ -90,14 +75,11 @@ const page = () => {
                 <p className={styles.mez}>{qiymet_gun} {mezenne} / gün</p>
                 </div>
                 <div className={styles.centere}>
-                <Link href="/"><button>İcarə et</button></Link>
+                <Link href="/texnikalar-etrafli"><button>İcarə et</button></Link>
                 </div>
               </div>
             )
           })}
-                </div>
-              )
-            })}
         </Carousel>
         </div>
       </div>

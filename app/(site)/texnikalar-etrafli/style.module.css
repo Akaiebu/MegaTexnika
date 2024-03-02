@@ -1,0 +1,151 @@
+.auto{
+    display: flex;
+    padding: 0 60px;
+    align-items: center;
+    justify-content: space-between;
+}
+.flex{
+    display: flex;
+    margin-bottom: 30px;
+    justify-content: space-between;
+}
+.sekil img {
+    width: 72px;
+    height: 95px;
+    border: 1px solid #FFC01F;
+    box-shadow: 0px 0px 7px 0px #95959540;
+}
+.div2{
+    display: flex;
+    width: 482px;
+    height: 597px;
+    margin: 0 10px 0;
+    align-items: center;
+    justify-content: center;
+}
+.div3{
+    width: 566px;
+    height: 597px;
+    padding: 90px 50px 50px;
+}
+.div2,
+.div3{
+    box-shadow: 0px 0px 7px 0px #95959540;
+}
+.h3 h3{
+    font-size: 20px;
+    font-weight: 600;
+    color: #596C72;
+    line-height: 24px;
+}
+.h3 p,
+.il p{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+}
+.h3 p{
+    color: #686868;
+    margin-bottom: 20px;
+}
+.il p{
+    color: #B0ADAD;
+}
+.lorem p{
+    font-size: 14px;
+    font-weight: 400;
+    color: #69768B;
+    line-height: 21px;
+    margin-bottom: 50px;
+}
+.flex p{
+    font-size: 15px;
+    font-weight: 600;
+    color: #596C72;
+    line-height: 18px;
+}
+.flex span{
+    font-size: 20px;
+    font-weight: 600;
+    color: #FFC01F;
+    line-height: 24px;
+}
+.div3 button{
+    height: 40px;
+    border: none;
+    width: 466px;
+    font-size: 12px;
+    margin-top: 30px;
+    font-weight: 700;
+    line-height: 15px;
+    border-radius: 30px;
+    background-color: #FFC01F;
+}
+.icare{
+    width: 290px;
+    margin-bottom: 10px;
+    border: 1px solid #95959540;
+    box-shadow: 0px 0px 7px 0px #95959540;
+}
+.first{
+    font-size: 18px;
+    font-weight: 600;
+    color: #596C72;
+    margin-top: 20px;
+    line-height: 22px;
+}
+.sec,
+.third{
+    margin-top: 5px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+}
+.sec{
+    color: #686868;
+}
+.third{
+    color: #B0ADAD;
+    margin-bottom: 30px;
+}
+.mez{
+    font-size: 18px;
+    margin-top: 5px;
+    text-align: end;
+    font-weight: 600;
+    color: #FFC01F;
+    line-height: 22px;
+}
+.product{
+    padding: 0 25px;
+}
+.icare button{
+    width: 205px;
+    margin:20px 0;
+    padding: 7px 0;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 15px;
+    border-radius: 30px;
+    background-color: white;
+    border: 1px solid #353535;
+}
+.centere{
+    width: 290px;
+    display: flex;
+    justify-content: center;
+}
+.icare:hover  button{
+    border:1px solid #FFC01F;
+    background-color: #FFC01F;
+}
+.arrows{
+    padding: 50px 0;
+}
+.oxsar h4{
+    font-size: 30px;
+    color: #596C72;
+    font-weight: 700;
+    line-height: 37px;
+    margin: 100px 0 0px;
+}

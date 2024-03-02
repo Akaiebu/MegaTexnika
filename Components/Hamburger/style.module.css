@@ -1,0 +1,117 @@
+/* components/HamburgerMenu.module.css */
+.container {
+    position: relative;
+  }
+  
+  .hamburger {
+    width: 30px;
+    height: 3px;
+    border-radius: 5px;
+    background-color: #FFC01F;
+    box-shadow: 0 2px 5px rgb(255, 101, 47 , .2);
+    transition: all 0.5s ease-in-out;
+    position: absolute;
+    right: 0;
+    margin-top: 60px;
+    margin-right: 20px;
+  }
+  .hamburger::before {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    border-radius: 5px;
+    background-color: #FFC01F;
+    transition: all 0.5s ease-in-out;
+    transform: translateY(-10px);
+    right: 0;
+}
+.hamburger::after {
+    content: '';
+    right: 0;
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    border-radius: 5px;
+    background-color: #FFC01F;
+    transition: all 0.5s ease-in-out;
+    transform: translateY(10px); 
+}
+.activeHamburger{
+    width: 30px;
+    height: 3px;
+    border-radius: 5px;
+    transform: translatex(-50px);
+    transition: all 0.5s ease-in-out;
+    background: transparent;
+    position: absolute;
+    right: 0;
+    z-index: 10;
+    margin-top: 50px;
+    margin-right: 10px;
+}
+.activeHamburger::before{
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    border-radius: 5px;
+    background-color: #FFC01F;
+    transition: all 0.5s ease-in-out;
+    transform: rotate(45deg) translate(35px , -35px); 
+}
+.activeHamburger::after{
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    border-radius: 5px;
+    background-color: #FFC01F;
+    transition: all 0.5s ease-in-out;
+    transform: rotate(-45deg) translate(35px , 35px); 
+}
+.sidenav{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    transform: translateX(100%);
+    transition: all 0.5 ease-in-out;
+}
+.activeSidenav a{
+    padding:0 10px;
+    font-weight: 400;
+    font-size: 14px;
+    color: #353535;
+    line-height: 17px;
+    display: inline-block;
+    margin-top: 10px;
+}
+.activeSidenav{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: white;
+    transform: translateX(0%);
+    transition: all 0.5 ease-in-out;
+    display: flex;
+    flex-direction: column;
+}
+.logo{
+        width: 100%;
+        border: 1px solid #FFC01F;
+        padding: 20px 0;
+        box-shadow: 0px 2px 7px 0px #9F9F9F40;
+    }
+@media (min-width: 768px) {
+    .hamburger{
+        display: none;
+    }
+    
+}
+@media (max-width: 430) {
+    .activeSidenav a{
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 22px;
+    }
+}

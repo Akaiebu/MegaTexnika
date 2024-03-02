@@ -1,10 +1,19 @@
 import React from 'react'
+import axios from 'axios';
 import Link from 'next/link'
 import Image from 'next/image'
 import styles from './style.module.css'
-import { adress, links, social_media } from '../data';
+import { Iadress, Ilinks, Imedia } from '@/Interface';
+import { FaFacebookF, FaInstagram, FaTwitter } from 'react-icons/fa6';
 
-const Footer = () => {
+const Footer = async () => {
+  const data = await axios.get('http://localhost:8000/links/')
+  const datas = await axios.get('http://localhost:8000/adress/')
+  const datass = [
+    { "id":1 , "to":"https://www.instagram.com/" , "icon": <FaInstagram/> },
+    { "id":2 , "to":"https://www.facebook.com/" , "icon": <FaFacebookF/> },
+    { "id":3 , "to":"https://twitter.com/?lang=en" , "icon": <FaTwitter/> }
+  ]
   return (
     <div className={styles.footer}>
         <div className='container'>
@@ -14,14 +23,14 @@ const Footer = () => {
                 <Image src="/logow.png" alt='logo' width={149} height={60}/>
             </div>
             <div className={styles.flexing}>
-            {links.map(({id,to,title}) => {
+            {data.data.map(({id,to,title}: Ilinks) => {
                 return (
                     <Link key={id} href={to}>{title}</Link>
                 )
               })}
             </div>
             <div className={styles.column}>
-            {adress.map(({id,to,title}) => {
+            {datas.data.map(({id,to,title}: Iadress) => {
                 return (
                     <Link key={id} href={to}>{title}</Link>
                 )
@@ -30,7 +39,7 @@ const Footer = () => {
             <div className={styles.col}>
                 <p>Qrafik (iş saatlarımız): B.e - Ş. 10:00 - 19:00</p>
                 <div className={styles.link}>
-                {social_media.map(({id,to,icon}) => {
+                {datass.map(({id,to,icon}: Imedia) => {
                 return (
                     <Link key={id} href={to}>{icon}</Link>
                 )

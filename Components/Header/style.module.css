@@ -38,3 +38,18 @@
     font-size: 12px;
     line-height: 15px;
 }
+@media (max-width: 768px){
+    .navi,
+    .lang{
+        display: none;
+    }
+    .navigation{
+        margin-left: 20px;
+    }
+    .flexing p{
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 18px;
+        width: 227px;
+    }
+}

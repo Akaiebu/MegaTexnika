@@ -1,9 +1,11 @@
 import React from 'react'
 import styles from './style.module.css'
 import Image from 'next/image'
-import { xeber } from '@/Components/data'
+import axios from 'axios'
+import { Ixeber } from '@/Interface'
 
-const page = () => {
+const page = async () => {
+  const { data } = await axios.get('http://localhost:8000/xeber/')
   return (
     <div className={styles.body}>
       <div className='vektor'>
@@ -11,7 +13,7 @@ const page = () => {
       </div>
       <div className='container'>
       <div>
-        {xeber.map(({id,basliq,tarix,melumat,source}) => {
+        {data.map(({id,basliq,tarix,melumat,source}: Ixeber) => {
           return (
             <div className={styles.flex} key={id}>
               <div className={styles.xeber}>

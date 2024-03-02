@@ -1,10 +1,14 @@
+import axios from 'axios'
 import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import styles from './style.module.css'
-import { description, images, yenilik } from '@/Components/data'
+import { Idescription, Iimages, Iyenilik } from '@/Interface'
 
-const page = () => {
+const page = async () => {
+  const data= await axios.get('http://localhost:8000/images/')
+  const datas = await axios.get('http://localhost:8000/yenilik/')
+  const datass = await axios.get('http://localhost:8000/description/')
   return (
       <div className='body'>
       <div className='container'>
@@ -21,7 +25,7 @@ const page = () => {
       <div className={styles.kateqoriyalar}>
         <h4>Kateqoriyalar</h4>
         <div className={styles.kateqoriya}>
-          {images.map(({id,to,title,source}) => {
+          {data.data.map(({id,to,title,source}: Iimages) => {
             return (
               <Link href={to} key={id}>
               <div className={styles.tech}>
@@ -51,7 +55,7 @@ const page = () => {
       <div className={styles.texnikalar}>
         <h4>Texnikalar</h4>
         <div className={styles.mehsul}>
-          {description.map(({id,title,il,qiymet_ay,qiymet_gun,mezenne,source}) => {
+          {datass.data.map(({id,title,il,qiymet_ay,qiymet_gun,mezenne,source}: Idescription) => {
             return (
               <div className={styles.icare} key={id}>
                 <Image src={source} alt='texnika' width={290} height={264} />
@@ -66,12 +70,11 @@ const page = () => {
                 <Link href="/"><button>İcarə et</button></Link>
                 </div>
               </div>
-            )
-          })}
+            )})}
         </div>
       </div>
           <div className={styles.centered}>
-            <Link href="/"><button className={styles.button}>Hamısına bax</button></Link>
+            <Link href="/texnikalar"><button className={styles.button}>Hamısına bax</button></Link>
           </div>
       </div>
           <div className={styles.marka}>
@@ -83,9 +86,10 @@ const page = () => {
           <h4>Yeniliklər</h4>
           <div>
             <div className={styles.flexer}>
-            {yenilik.map(({id,basliq,info,tarix,source}) => {
+            {datas.data.map(({id,basliq,info,tarix,source}: Iyenilik) => {
               return (
-                  <div key={id} className={styles.new}>
+                  <Link href="/xeber">
+                    <div key={id} className={styles.new}>
                   <Image src={source} alt='texnika' width={290} height={228} />
                   <div className={styles.padding}>
                   <p className={styles.p1}>{basliq}</p>
@@ -98,8 +102,8 @@ const page = () => {
                   </div>
                   </div>
                 </div>
-              )
-            })}
+                  </Link>
+                )})}
             </div>
           </div>
         </div>
@@ -111,7 +115,7 @@ const page = () => {
               <h4>Bizimlə əlaqə saxla!</h4>
               <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled</p>
               <div className={styles.inputs}>
-                <form action="https://getform.io/f/Pe9qn4eL" method='POST'>
+                <form action="https://getform.io/f/qaQY3qan" method='POST'>
                 <input type="text" name="ad" id="ad"  placeholder='Ad'/>
                 <input type="text" name="soyad" id="soyad" placeholder='Soyad'/>
                 <input type="email" name="mail" id="mail"  placeholder='E-mail'/>
@@ -132,9 +136,7 @@ const page = () => {
         <div className={styles.atech}>
           <h2>Niyə bizi seçməlisiniz</h2>
           <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled</p>
-          <p>
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled
-          </p>
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled</p>
         </div>
         <div className={styles.imgborder}>
         <Image src="/cat.png" alt='texnika' width={541} height={355}/>

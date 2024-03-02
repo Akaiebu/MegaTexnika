@@ -2,9 +2,11 @@ import React from 'react'
 import styles from './style.module.css'
 import Image from 'next/image'
 import Link from 'next/link'
-import { xeberler } from '@/Components/data'
+import axios from 'axios'
+import { Ixeberler } from '@/Interface'
 
-const page = () => {
+const page = async () => {
+  const { data } = await axios.get('http://localhost:8000/xeberler/')
   return (
     <div>
       <div className="container">
@@ -18,7 +20,7 @@ const page = () => {
         </div>
       </div>
       <div className={styles.flexer}>
-        {xeberler.map(({id,to,basliq,tarix,source}) => {
+        {data.map(({id,to,basliq,tarix,source}: Ixeberler) => {
           return (
             <Link href={to}>
             <div key={id} className={styles.new}>
