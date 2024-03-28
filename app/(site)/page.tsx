@@ -3,6 +3,7 @@ import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import styles from './style.module.css'
+import Markalar from '@/Components/Markalar'
 import { Idescription, Iimages, Iyenilik } from '@/Interface'
 
 const page = async () => {
@@ -78,8 +79,7 @@ const page = async () => {
           </div>
       </div>
           <div className={styles.marka}>
-            <h4>Markalar</h4>
-            <Image src="/markalar.png" alt='marka' width={1250} height={46} />
+            <Markalar />
           </div>
       <div className='container'>
         <div className={styles.yeni}>
@@ -105,6 +105,9 @@ const page = async () => {
                   </Link>
                 )})}
             </div>
+            <div className={styles.xebers}>
+            <Link href="/blog"><button className={styles.button}>Hamısına bax</button></Link>
+          </div>
           </div>
         </div>
       </div>
@@ -132,7 +135,7 @@ const page = async () => {
         </div>
         <div className={styles.esas}>
         <div className="container">
-        <div className={styles.hflex}>
+        <div className={styles.hflex} id={styles.catimage}>
         <div className={styles.atech}>
           <h2>Niyə bizi seçməlisiniz</h2>
           <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled</p>

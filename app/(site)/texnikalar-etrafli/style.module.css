@@ -149,3 +149,9 @@
     line-height: 37px;
     margin: 100px 0 0px;
 }
+.flexe {
+    display: grid;
+    grid-template-columns: repeat(4 , 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    margin-top: 40px;    
+}

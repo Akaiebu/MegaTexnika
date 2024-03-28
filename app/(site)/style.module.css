@@ -268,6 +268,9 @@
 .truck{
     width: 700px;
 }
+.xebers{
+    display: none;
+}
 @media (max-width: 430px) {
     .imgborder{
         display: none;
@@ -275,14 +278,14 @@
     .hflex{
         background-image: url("/image.png");
         background-repeat: no-repeat;
-        width: 430px;
+        width: 414px;
         height: 597px;
         opacity: 0.3px;
         background-size: cover;
     }
     .atech{
-        width: 430px;
-        padding: 30px;
+        width: 414px;
+        padding: 10px;
         height: 262px;
     }
     .atech h2{
@@ -297,12 +300,15 @@
         font-weight: 400;
         line-height: 21px;
         color: white;
-        width: 400px;
+        width: 350px;
     }
     .atech button{
         width: 147px;
     }
-    .kateqoriyalar h4{
+    .kateqoriyalar h4,
+    .texnikalar h4,
+    .yeni h4,
+    .contact h4{
         font-size: 30px;
         font-weight: 700;
         line-height: 37px;
@@ -339,20 +345,87 @@
     .about{
         background-image: url("/mega-tex.png");
         background-repeat: no-repeat;
-        width: 430px;
+        width: 414px;
         height: 597px;
         opacity: 0.3px;
         background-size: cover;
+        background-position: center;
     }
     .habout{
-        width: 430px;
-        padding: 30px;
-        height: 262px;;
+        width: 414px;
+        height: 400px;;
+    }
+    .sinaq{
+        padding: 20px;
     }
     .sinaq h2{
         font-size: 30px;
         font-weight: 700;
         line-height: 40px;
         color: white;
+    }
+    .sinaq p{
+        color: white;
+        width: 340px;
+    }
+    .mehsul,
+    .flexer{
+        flex-direction: column;
+    }
+    .icare,
+    .new{
+        width: 350px;
+        margin: 0 auto 20px;
+    }
+    .icare img,
+    .new img{
+        width: 350px;
+    }
+    .center{
+        margin: 0 auto;
+    }
+    .center button{
+        width: 300px;
+    }
+    .centered,
+    .xebers{
+        width: 400px;
+    }
+    .centered .button,
+    .xebers .button{
+        width: 350px;
+    }
+    .xebers{
+        display: block;
+        padding: 0 25px;
+    }
+    .back{
+        width: 100%;
+        height: 600px;
+        background-color: #EFEFEF;
+    }
+    .inputs{
+        display: flex;
+        flex-direction: column;
+    }
+    .truck{
+        display: none;
+    }
+    .contact p{
+        margin:0 0 0 20px;
+    }
+    .inputs input{
+        margin: 15px 0 0 20px;
+        width: 376px;
+    }
+    #gonder{
+        width: 376px;
+        margin-top: 30px;
+    }
+    #catimage{
+        background-image: url("../../public/cat.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
     }
 }

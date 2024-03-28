@@ -59,3 +59,14 @@
 .h{
     font-weight: 600;
 }
+.flexer {
+    display: flex;
+    justify-content: space-between;
+    width: 450px;
+}
+@media(max-width: 414px){
+    .flex{
+        display: flex;
+        flex-direction: column;
+    }
+}

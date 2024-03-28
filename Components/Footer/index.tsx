@@ -22,6 +22,7 @@ const Footer = async () => {
             <div>
                 <Image src="/logow.png" alt='logo' width={149} height={60}/>
             </div>
+            <div className={styles.flexer}>
             <div className={styles.flexing}>
             {data.data.map(({id,to,title}: Ilinks) => {
                 return (
@@ -35,6 +36,7 @@ const Footer = async () => {
                     <Link key={id} href={to}>{title}</Link>
                 )
               })}
+            </div>
             </div>
             <div className={styles.col}>
                 <p>Qrafik (iş saatlarımız): B.e - Ş. 10:00 - 19:00</p>

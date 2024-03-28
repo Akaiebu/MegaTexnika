@@ -2,9 +2,9 @@ import axios from 'axios';
 import Link from 'next/link'
 import Image from 'next/image';
 import styles from './style.module.css'
+import HamburgerMenu from '../Hamburger';
 import { Iheadlinks, Imedia } from '@/Interface';
 import { FaFacebookF, FaInstagram, FaTwitter } from 'react-icons/fa6';
-import HamburgerMenu from '../Hamburger';
 
 const Header = async () => {
   const data = await axios.get('http://localhost:8000/headlinks/')
