@@ -16,7 +16,7 @@ const page = async () => {
       <div className={styles.hflex}>
         <div className={styles.atech}>
           <h2>Ağır texnikanızı bizdən satın alın</h2>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled</p>
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled</p>
           <Link href="/haqqimizda"><button>Ətraflı</button></Link>
         </div>
         <div className={styles.imgborder}>
@@ -48,7 +48,7 @@ const page = async () => {
         </div>
         <div className={styles.sinaq}>
         <h2>Mega Texnika-da sınaqdan keçirilmiş texnikalar</h2>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled</p>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled</p>
         <Link href="/haqqimizda"><button>Haqqımızda</button></Link>
         </div>
         </div>
@@ -88,8 +88,8 @@ const page = async () => {
             <div className={styles.flexer}>
             {datas.data.map(({id,basliq,info,tarix,source}: Iyenilik) => {
               return (
-                  <Link href="/xeber">
-                    <div key={id} className={styles.new}>
+                  <Link href="/xeber" key={id}>
+                    <div  className={styles.new}>
                   <Image src={source} alt='texnika' width={290} height={228} />
                   <div className={styles.padding}>
                   <p className={styles.p1}>{basliq}</p>
@@ -116,7 +116,7 @@ const page = async () => {
             <div className={styles.grid}>
             <div className={styles.contact}>
               <h4>Bizimlə əlaqə saxla!</h4>
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled</p>
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled</p>
               <div className={styles.inputs}>
                 <form action="https://getform.io/f/qaQY3qan" method='POST'>
                 <input type="text" name="ad" id="ad"  placeholder='Ad'/>
@@ -138,8 +138,8 @@ const page = async () => {
         <div className={styles.hflex} id={styles.catimage}>
         <div className={styles.atech}>
           <h2>Niyə bizi seçməlisiniz</h2>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled</p>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled</p>
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled</p>
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled</p>
         </div>
         <div className={styles.imgborder}>
         <Image src="/cat.png" alt='texnika' width={541} height={355}/>
